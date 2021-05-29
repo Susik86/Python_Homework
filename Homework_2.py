@@ -148,16 +148,16 @@ import math
 
 
 # Task 9
-rows = 10  # Multiplication table up to 10
-columns = 10  # column values
-for i in range(1, rows+1):
-    for j in range(1, columns+1):
-        c = i*j
-        print("{:3d} ".format(c), end='')
-    print("\n")
+# rows = 10  # Multiplication table up to 10
+# columns = 10  # column values
+# for i in range(1, rows+1):
+#     for j in range(1, columns+1):
+#         c = i*j
+#         print("{:3d} ".format(c), end='')
+#     print("\n")
+#
 
 
-    
 # Task 10
 # 10. Տպեք հետևյալ պատկերը․
 rows = 10
