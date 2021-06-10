@@ -1,0 +1,11 @@
+05/06/2021
+
+Cheese    :               2
+Tomato    :               7
+Potato    :               5
+Chicken   :               5
+Milk      :               2
+Coffee    :               9
+Tea       :               4
+Khorovats :               8
+Ice Cream :               8
