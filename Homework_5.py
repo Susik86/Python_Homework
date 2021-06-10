@@ -26,35 +26,35 @@ from validator import validate_number
 # In[ ]:
 
 #
-#
-# try:
-#     print("Start")
-#     with open("Random_words.txt", 'r') as f:
-#         new_line = (random.choice(list(f))).strip()
-#         print(new_line)
-#
-#     size_random_word = str(len(new_line))
-#     print(size_random_word)
-#     word_space = int(size_random_word) * "-"
-#     print(word_space)
-#     while '-' in word_space:
-#         guessed_letter = input("Guess a letter!")
-#         if guessed_letter in new_line:
-#             for index in range(len(new_line)):
-#                 if guessed_letter == new_line[index]:
-#                     word_space = word_space[:index] + guessed_letter + word_space[index + 1:]
-#             print(word_space)
-#         else:
-#             print("Incorrect")
-#         reminder = input("Do you want continue?")
-#         if reminder != "yes":
-#             break
-#
-# except Exception as e:
-#     print("Something went wrong!", e)
-# finally:
-#     print("End")
-#
+
+try:
+    print("Start")
+    with open("Random_words.txt", 'r') as f:
+        new_line = (random.choice(list(f))).strip()
+        print(new_line)
+
+    size_random_word = str(len(new_line))
+    print(size_random_word)
+    word_space = int(size_random_word) * "-"
+    print(word_space)
+    while '-' in word_space:
+        guessed_letter = input("Guess a letter!")
+        if guessed_letter in new_line:
+            for index in range(len(new_line)):
+                if guessed_letter == new_line[index]:
+                    word_space = word_space[:index] + guessed_letter + word_space[index + 1:]
+            print(word_space)
+        else:
+            print("Incorrect")
+        reminder = input("Do you want continue?")
+        if reminder != "yes":
+            break
+
+except Exception as e:
+    print("Something went wrong!", e)
+finally:
+    print("End")
+
 
 
 # Task 2
@@ -62,26 +62,26 @@ from validator import validate_number
 # Որպես օրինակ ֆայլ կարող եք օգտագործել տնային աշխատանքի folder-ի միջի Animal_farm.txt.txt ֆայլը։
 
 
-# with open('Animal_farm.txt') as file:
-#     data = file.read().split()
-#     max_word = len(max(data, key = len))
-#     print(max_word)
-#     res = [word for word in data if len(word) == max_word]
-#     print(res)
-#
+with open('Animal_farm.txt') as file:
+    data = file.read().split()
+    max_word = len(max(data, key = len))
+    print(max_word)
+    res = [word for word in data if len(word) == max_word]
+    print(res)
+
 
 
 # Task 3
 
 # 3. Գրել ֆունկցիա, որը կստանա ֆայլի path-ը որպես արգումենտ և կվերադարձնի դրա չափսերը բայթերով։
-#
-# f = "/Users/susannakarapetyan/PythonACA/basic/Random_words.txt"
-#
-#
-# def get_size(f):
-#     return os.path.getsize(f)
-#
-# print(get_size(f))
+
+
+f = "/Users/susannakarapetyan/PythonACA/basic/Random_words.txt"
+
+def get_size(f):
+    return os.path.getsize(f)
+
+print(get_size(f))
 
 
 # Task 4
@@ -99,27 +99,26 @@ from validator import validate_number
 # Եթե exception-ներ լինեն, handle արեք։
 
 
+# valid email
+email = "susik@yopmail.com"
 
-# email = "susik@yopmail.com"
-#
-# # valid email
-# try:
-#     print(validate_email(email))
-# except Exception as e:
-#     print("Something went wrong!", e)
-# finally:
-#     print("End")
-#
-#
-# email = "susikyopmail.com"
-#
-# # invalid email
-# try:
-#     print(validate_email(email))
-# except Exception as e:
-#     print("Something went wrong!", e)
-# finally:
-#     print("End")
+try:
+    print(validate_email(email))
+except Exception as e:
+    print("Something went wrong!", e)
+finally:
+    print("End")
+
+
+email = "susikyopmail.com"
+
+# invalid email
+try:
+    print(validate_email(email))
+except Exception as e:
+    print("Something went wrong!", e)
+finally:
+    print("End")
 
 
 # valid number
@@ -135,7 +134,7 @@ finally:
     print("End")
 
 
-# # invalid number
+# invalid number
 number = "099032 32 32"
 print(validate_number(number))
 
